@@ -1,0 +1,13 @@
+<?page title="Creer Fiche" contentType="text/html;charset=UTF-8"?>
+<zk>
+  <borderlayout >
+            <center >
+                <include src="FicheMetierFresh.zul"/>
+            </center>
+            <east maxsize="600" size="30%" flex="true" border="0" splittable="true">
+                <div style="background:#E6D92C" width="100%">
+                    <include src="partieDroite.zul"/>
+                </div>
+            </east>
+        </borderlayout>
+</zk>

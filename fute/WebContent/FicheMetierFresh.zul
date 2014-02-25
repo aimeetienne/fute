@@ -1,0 +1,56 @@
+
+	<window title="Fiche Métier" border="none" width="100%"
+		apply="org.zkoss.bind.BindComposer"
+		viewModel="@id('vm') @init('fute.FicheMetiersMVVM')" height="100%"  style="overflow:auto">
+		<div id="div_principal" height="100%">
+			<div id="div_intitule_métier">
+				Métier :
+				<textbox id="Metier_de_la_fiche"
+					value="@bind(vm.ficheMetier.nomDuMetier)" />
+<button label="Enregistrer"
+				onClick="@command('sauvegarder')">
+			</button>
+
+			</div>
+				<groupbox>
+				FICHE METIER BOSSONS FUTE N°
+				<label id="numero_fiche" value="44"></label>
+				<div id="ROME_CIP_INSEE">
+					ROME :
+					<label id="ROME" value=""></label>
+					<textbox value="@bind(vm.ficheMetier.coderome)" />
+					CITP-08 :
+					<label id="CITP_08" value=""></label>
+					<textbox value="@bind(vm.ficheMetier.citp)" />
+					INSEE :
+					<label id="INSEE" value=""></label>
+					<textbox value="@bind(vm.ficheMetier.insee)" />
+				</div>
+			</groupbox>
+		<style>
+					.title { font-weight: bold; font-size: 12px; }
+					.demoTbx .z-tab { margin-right: 2px; }
+				</style>
+
+				<!-- Choisir la précision d'édition avec toolbar= Full/Simple/Complex, à customiser dans config.js -->
+				<ckeditor id="ed2"
+					value="@bind(vm.ficheMetier.edDefinition)" width="100%"	 toolbar="Full" vflex="true" 
+										filebrowserImageBrowseUrl="/widgets/input/wysiwyg_editor/img"
+					filebrowserFlashBrowseUrl="/widgets/input/wysiwyg_editor/flash"
+					customConfigurationsPath="/widgets/input/wysiwyg_editor/config.js">
+					
+				</ckeditor>
+				<zscript>
+				
+			 
+				
+				</zscript>
+		
+		
+			
+		</div>
+		
+		
+		
+	</window>
+

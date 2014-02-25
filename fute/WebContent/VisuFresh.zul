@@ -1,0 +1,49 @@
+<?page title="Visualisation" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window title="Visualisation" border="normal" apply="org.zkoss.bind.BindComposer" viewModel="@id('vm') @init('fute.FicheMetiersMVVM')">
+
+<!-- <label style="font-weight: bold;font-size: 26px;" value="Metier"> </label> -->
+
+<!--  <html content="@bind(vm.ficheMetier.edDefinition)" /> -->
+ 
+
+ <html>
+ 
+ <![CDATA[
+        
+       
+<h2 align="center">
+${vm.ficheMetier.nomDuMetier}
+</h2>
+
+
+<p  align="center">FICHE METIER BOSSONS FUTE N° ${vm.ficheMetier.getNumeroFiche()}</p>
+<table border="1"  align="center">
+<tbody>
+<tr>
+<td>ROME : ${vm.ficheMetier.coderome} </td>
+<td>CITP-08 : ${vm.ficheMetier.citp}</td>
+<td>INSEE  : ${vm.ficheMetier.insee} </td>
+</tr>
+</tbody>
+</table>
+
+
+${vm.ficheMetier.edDefinition}
+
+
+      
+    ]]></html>
+
+<!-- <label id="numero_fiche" value=""></label> -->
+
+
+
+
+
+
+
+
+
+</window>
+</zk>

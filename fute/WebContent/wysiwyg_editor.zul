@@ -1,0 +1,60 @@
+<zk>
+<!-- <separator height="20px"/> -->
+	<style>
+	.title {
+		font-weight: bold;
+		font-size: 12px;
+	}
+	.demoTbx .z-tab {
+		margin-right: 2px;
+	}
+	</style>
+	
+<!-- Choisir la précision d'édition avec toolbar= Full/Simple/Complex, à customiser dans config.js -->
+	<ckeditor id="ed" width="100%" height="150px" toolbar="Complex"
+		filebrowserImageBrowseUrl="/widgets/input/wysiwyg_editor/img" 
+		filebrowserFlashBrowseUrl="/widgets/input/wysiwyg_editor/flash"
+		customConfigurationsPath="/widgets/input/wysiwyg_editor/config.js">
+		
+
+<attribute name="value"><![CDATA[
+
+]]></attribute>
+
+	</ckeditor>
+	<separator height="20px"/>
+	
+	
+	
+<!-- 	Inclut des radio box pour choisir manuellement la précision de l'édition. Ne sert à rien si l'attribut "toolbar=qqchose" est dans la balise -->
+<!-- 	dédiée au ckeditor plus haut-->
+<!-- 	<include src="/wysiwyg_editor_ctrl.zul" /> -->
+	
+	
+	
+
+<!-- 	<separator height="20px"/> -->
+	
+	
+<!-- 	Deux onglets donnant apperçut browser pour l'un, et le code html pour l'autre -->
+<!-- 	<tabbox width="100%" sclass="demoTbx"> -->
+<!-- 		<toolbar> -->
+<!-- 			Vous pouvez également directement éditer le HTML -->
+<!-- 		</toolbar> -->
+<!-- 		<tabs> -->
+<!-- 			<tab label="Browser Result" /> -->
+<!-- 			<tab label="HTML Source" /> -->
+<!-- 		</tabs> -->
+<!-- 		<tabpanels> -->
+<!-- 			<tabpanel> -->
+<!-- 				<div id="cntDiv" style="background: #FEFFEB;" width="540px"> -->
+<!-- 					<html content="${ed.value}" /> -->
+<!-- 				</div> -->
+<!-- 			</tabpanel> -->
+<!-- 			<tabpanel> -->
+<!-- 				<textbox id="ta" rows="10" width="540px" value="${ed.value}" onChange="ed.value = ta.value" -->
+<!-- 					style="background: #E7F3FF;border: 0 none;" /> -->
+<!-- 			</tabpanel> -->
+<!-- 		</tabpanels> -->
+<!-- 	</tabbox> -->
+</zk>

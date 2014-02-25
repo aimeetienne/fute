@@ -1,0 +1,112 @@
+<?page title="Visualisation" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window title="Visualisation" border="normal" apply="org.zkoss.bind.BindComposer" viewModel="@id('vm') @init('fute.FicheMetiersMVVM')">
+
+<!-- <label style="font-weight: bold;font-size: 26px;" value="Metier"> </label> -->
+
+<!--  <html content="@bind(vm.ficheMetier.edDefinition)" /> -->
+ 
+
+ <html>
+ 
+ <![CDATA[
+        
+       
+<h2 align="center">
+${vm.ficheMetier.nomDuMetier}
+</h2>
+
+
+<p  align="center">FICHE METIER BOSSONS FUTE N° ${vm.ficheMetier.getNumeroFiche()}</p>
+<table border="1"  align="center">
+<tbody>
+<tr>
+<td>ROME : ${vm.ficheMetier.coderome} </td>
+<td>CITP-08 : ${vm.ficheMetier.citp}</td>
+<td>INSEE  : ${vm.ficheMetier.insee} </td>
+</tr>
+</tbody>
+</table>
+<h2>1. INTITULES SYNONYMES OU APPARENTES</h2>
+
+
+]]></html>
+
+<listbox model="@bind(vm.ficheMetier.thesoVisu1)" >
+<listhead>
+   <listheader />
+</listhead>
+<template name="model">
+   <listitem>
+       <listcell label="@bind(each)" />
+   </listitem>
+</template>
+</listbox>
+
+<html>
+
+<![CDATA[
+
+${vm.ficheMetier.edDefinition}
+
+<h2 >3. FORMATION - QUALIFICATION</h2>
+
+${vm.ficheMetier.edActivite}
+
+<h3 >4.2. DESCRIPTION DE L'ACTIVITE</h3>
+
+${vm.ficheMetier.ed43_47}
+
+
+<h2 >5. ACTIVITES POUVANT ETRE ASSOCIEES</h2>
+
+${vm.ficheMetier.edDanger}
+
+
+<h3 >6.2. AMBIANCES ET CONTRAINTES PHYSIQUES</h3>
+
+
+<h3 >6.3. AGENTS CHIMIQUES</h3>
+
+<h3 >6.4. AGENTS BIOLOGIQUES</h3>
+
+${vm.ficheMetier.contraintesOrga}
+
+
+<h2 >7. RISQUES POUR LA SANTE</h2>
+
+<h3 >7.1. MALADIES PROFESSIONNELLES</h3>
+
+<h3 >7.2. AUTRES MALADIES LIEES A L'ACTIVITE PROFESSIONNELLE</h3>
+
+${vm.ficheMetier.medical8}
+
+
+<h3 >8.2. EXAMENS COMPLEMENTAIRES</h3>
+
+<h3 >8.3. VACCINATIONS</h3>
+
+${vm.ficheMetier.ed84_101}
+<h3>10.2. PREVENTION COLLECTIVE</h3>
+
+<h3 >10.3. PREVENTION INDIVIDUELLE</h3>
+
+${vm.ficheMetier.ed104_114}
+<h2 >12. BIBLIOGRAPHIE</h2>
+
+<h2 >13. ADRESSES UTILES</h2>
+      
+    ]]></html>
+
+<!-- <label id="numero_fiche" value=""></label> -->
+
+
+
+
+
+
+
+
+
+</window>
+</zk>

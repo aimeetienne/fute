@@ -1,0 +1,75 @@
+<zk>
+<grid>
+					<rows>
+					
+					<row>
+					Rechercher:
+							<textbox id="Rechercher_Activité" width="80%"
+								value="${win$composer.inventoryItem.title}"
+								constraint="no empty" />
+					
+					</row>
+					<row>
+					<cell> 
+<!-- 					<listbox id="itemList4_2" onDrop="move(event.dragged)" droppable="true"> -->
+<!--             <listhead> -->
+<!--                 <listheader label="Item(s)" /> -->
+<!--             </listhead> -->
+            
+<!--         </listbox> -->
+
+
+
+<tree id="tree2" width="200px" height="500px" multiple="true" droppable="true" onDrop="move1(event.dragged)">
+			<treechildren>
+				<treeitem>
+					<treerow draggable="true">
+						<treecell label="Test Item 1" />
+					</treerow>
+				</treeitem>
+		</treechildren>
+</tree>
+					</cell>
+					<cell>
+
+<tree id="tree1" width="200px" height="500px" multiple="true">
+			<treechildren>
+				<treeitem value="Item 1">
+					<treerow droppable="true" onDrop="move2(event.dragged)">
+						<treecell label="Item 1" />
+					</treerow>
+					<treechildren>
+						<treeitem forEach="1,2,3,4,5">
+							<custom-attributes parentText="Item 1"/>
+							<treerow draggable="true" >
+								<treecell label="Item 1.${each}"/>
+							</treerow>
+						</treeitem>
+					</treechildren>
+				</treeitem>
+				<treeitem value="Item 2">
+					<treerow draggable="true" droppable="true" onDrop="move2(event.dragged)">
+						<treecell label="Item 2" />
+					</treerow>
+					<treechildren>
+						<treeitem forEach="1,2,3,4,5">
+							<custom-attributes parentText="Item 2"/>
+							<treerow draggable="true" >
+								<treecell label="Item 2.${each}" />
+							</treerow>
+						</treeitem>
+					</treechildren>
+				</treeitem>
+				<treeitem label="Item 3" />
+			</treechildren>
+</tree>
+
+
+						</cell>
+						
+					
+					</row>
+					
+					</rows>
+					</grid>
+</zk>

@@ -1,0 +1,15 @@
+<zk>
+	<groupbox closable="false" sclass="z-demo-config">
+		<caption>Toolbar</caption>
+		<radiogroup>
+			<attribute name="onCheck"><![CDATA[
+				ed.setToolbar(self.getSelectedItem().getValue());
+			]]></attribute>
+			<vlayout>
+				<radio label="Customized Simple" value="Simple" />
+				<radio label="Customized Complex" value="Complex" checked="true"/>
+				<radio label="Full" value="Full" />
+			</vlayout>
+		</radiogroup>
+	</groupbox>
+</zk>

@@ -1,0 +1,164 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window title="Partie Droite" border="normal " width="100%" apply="org.zkoss.bind.BindComposer" viewModel="@id('vm') @init('fute.FicheMetiersMVVM')">
+
+<tabbox id="tb" height="100%" >
+    <tabs id="tabs">
+        <tab id="A" label="Tab A" />
+        <tab id="B" label="Tab B" />
+          <tab id="C" label="Tab C" />
+          <tab id="D" label="Tab D" />      
+    </tabs>
+    <tabpanels>
+        <tabpanel> 
+        
+        <listbox model="@bind(vm.thesaurus.theso1)" checkmark="true"  multiple="true" mold="paging" pageSize="9">
+        <listhead>
+            <listheader width="32px" />
+            <listheader label="Thésaurus"   sort="auto(model)" />
+        </listhead>
+        <template name="model">
+            <listitem>
+               <listcell></listcell>
+                <listcell label="@bind(each)" />
+                  
+            </listitem>
+        </template>
+    </listbox>
+  <space/>
+
+  <listbox model="@bind(vm.thesaurus.theso2)" checkmark="true"  multiple="true" mold="paging" pageSize="9">
+        <listhead>
+            <listheader width="32px" />
+            <listheader label="Thésaurus"   sort="auto(model)" />
+        </listhead>
+        <template name="model">
+            <listitem>
+               <listcell></listcell>
+                <listcell label="@bind(each)" />
+                  
+            </listitem>
+        </template>
+    </listbox>
+  
+        
+        </tabpanel>
+        
+        <tabpanel> 
+        
+               <listbox model="@bind(vm.thesaurus.theso3)" checkmark="true"  multiple="true" mold="paging" pageSize="9">
+        <listhead>
+            <listheader width="32px" />
+            <listheader label="Thésaurus"   sort="auto(model)" />
+        </listhead>
+        <template name="model">
+            <listitem>
+               <listcell></listcell>
+                <listcell label="@bind(each)" />
+                  
+            </listitem>
+        </template>
+    </listbox>
+  <space/>
+
+  <listbox model="@bind(vm.thesaurus.theso4)" checkmark="true"  multiple="true" mold="paging" pageSize="9">
+        <listhead>
+            <listheader width="32px" />
+            <listheader label="Thésaurus"   sort="auto(model)" />
+        </listhead>
+        <template name="model">
+            <listitem>
+               <listcell></listcell>
+                <listcell label="@bind(each)" />
+                  
+            </listitem>
+        </template>
+    </listbox>
+  
+        
+        </tabpanel>
+        
+        
+             <tabpanel> 
+        
+               <listbox model="@bind(vm.thesaurus.theso5)" checkmark="true"  multiple="true" mold="paging" pageSize="9">
+        <listhead>
+            <listheader width="32px" />
+            <listheader label="Thésaurus"   sort="auto(model)" />
+        </listhead>
+        <template name="model">
+            <listitem>
+               <listcell></listcell>
+                <listcell label="@bind(each)" />
+                  
+            </listitem>
+        </template>
+    </listbox>
+  <space/>
+
+  <listbox model="@bind(vm.thesaurus.theso6)" checkmark="true"  multiple="true" mold="paging" pageSize="9">
+        <listhead>
+            <listheader width="32px" />
+            <listheader label="Thésaurus"   sort="auto(model)" />
+        </listhead>
+        <template name="model">
+            <listitem>
+               <listcell></listcell>
+                <listcell label="@bind(each)" />
+                  
+            </listitem>
+        </template>
+    </listbox>
+  
+        
+        </tabpanel>
+         
+        
+        
+              <tabpanel> 
+        
+               <listbox model="@bind(vm.thesaurus.theso7)" checkmark="true"  multiple="true" mold="paging" pageSize="9">
+        <listhead>
+            <listheader width="32px" />
+            <listheader label="Thésaurus"   sort="auto(model)" />
+        </listhead>
+        <template name="model">
+            <listitem>
+               <listcell></listcell>
+                <listcell label="@bind(each)" />
+                  
+            </listitem>
+        </template>
+    </listbox>
+  <space/>
+
+  <listbox model="@bind(vm.thesaurus.theso8)" checkmark="true"  multiple="true" mold="paging" pageSize="9">
+        <listhead>
+            <listheader width="32px" />
+            <listheader label="Thésaurus"   sort="auto(model)" />
+        </listhead>
+        <template name="model">
+            <listitem>
+               <listcell></listcell>
+                <listcell label="@bind(each)" />
+                  
+            </listitem>
+        </template>
+    </listbox>
+  
+        
+        </tabpanel>
+        
+        
+        
+        
+    </tabpanels>
+    
+    
+    
+</tabbox>
+ 
+    
+   
+</window>
+</zk>

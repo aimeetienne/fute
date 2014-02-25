@@ -1,0 +1,97 @@
+<zk>
+<grid>
+					<rows>
+					
+					<row>
+					Rechercher:
+							<textbox id="Rechercher_Activité1" width="80%"
+								value="${win$composer.inventoryItem.title}"
+								constraint="no empty" />
+					
+					</row>
+					<row>
+					<cell> 
+<!-- 					<listbox id="itemList4_24" onDrop="move(event.dragged)" droppable="true"> -->
+<!--             <listhead> -->
+<!--                 <listheader label="Item(s)" /> -->
+<!--             </listhead> -->
+            
+<!--         </listbox> -->
+
+<tree id="tree123" rows="7" multiple="true"
+								checkmark="true" onDrop="move(event.dragged)" droppable="true" >
+								<treecols>
+									<treecol label="Métier(s) apparenté(s)" />
+									<treecol label="?" />
+								</treecols>
+								
+								</tree>
+					</cell>
+					<cell>
+
+							<tree id="tree12" rows="7" multiple="true"
+								checkmark="true" onDrop="move(event.dragged)"  draggable="true" >
+								<treecols>
+									<treecol label="Thésaurus des professions" />
+									<treecol label="Activités" />
+								</treecols>
+								<treechildren draggable="true"  onDrop="move(event.dragged)">
+									<treeitem draggable="true"  onDrop="move(event.dragged)">
+										<treerow draggable="true"  onDrop="move(event.dragged)">
+											<treecell label="Item 1"  />
+											<treecell
+												label="Item 1 description" />
+										</treerow>
+									</treeitem>
+									<treeitem draggable="true" onDrop="move(event.dragged)">
+										<treerow draggable="true" onDrop="move(event.dragged)">
+											<treecell label="Item 2" />
+											<treecell
+												label="Item 2 description" />
+										</treerow>
+										<treechildren>
+											<treeitem>
+												<treerow>
+													<treecell
+														label="Item 2.1" />
+												</treerow>
+												<treechildren>
+													<treeitem>
+														<treerow>
+															<treecell
+																label="Item 2.1.1" />
+														</treerow>
+													</treeitem>
+													<treeitem>
+														<treerow>
+															<treecell
+																label="Item 2.1.2" />
+														</treerow>
+													</treeitem>
+												</treechildren>
+											</treeitem>
+											<treeitem>
+												<treerow>
+													<treecell
+														label="Item 2.2" />
+													<treecell
+														label="Item 2.2 description" />
+												</treerow>
+											</treeitem>
+										</treechildren>
+									</treeitem>
+									<treeitem label="Item 3" />
+								</treechildren>
+								
+							
+							</tree>
+
+
+						</cell>
+						
+					
+					</row>
+					
+					</rows>
+					</grid>
+</zk>
